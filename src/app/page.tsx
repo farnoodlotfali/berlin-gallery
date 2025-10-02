@@ -4,6 +4,7 @@ import Image from "next/image";
 
 import { SheetDemo } from "@/components/app-sidebar";
 import { Button } from "@/components/ui/button";
+import { Container } from "@/components/ui/container";
 import { cn } from "@/lib/utils";
 
 type MasonryItem = {
@@ -22,7 +23,7 @@ function Masonry({ items, className }: { items: MasonryItem[]; className?: strin
       {items.map((item, i) => (
         <div
           key={i}
-          className="border-border bg-muted/30 mb-6 overflow-hidden rounded-md border shadow-sm not-last-of-type:break-inside-avoid"
+          className="border-border bg-muted/30 mb-6 overflow-hidden shadow-sm not-last-of-type:break-inside-avoid"
         >
           <Image
             style={{
@@ -56,7 +57,7 @@ const IMAGES = (() => {
 
 export default function Home() {
   return (
-    <div className="p-10">
+    <Container className="py-10">
       <Button>Click me</Button>
 
       <div className={cn("mt-8")}>
@@ -64,6 +65,6 @@ export default function Home() {
       </div>
 
       <SheetDemo />
-    </div>
+    </Container>
   );
 }
