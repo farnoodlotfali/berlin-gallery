@@ -22,8 +22,8 @@ export const metadata: Metadata = {
     "Unique digital photos and professional Lightroom presets for photographers and creators. Enhance your projects with stunning visuals.",
   icons: {
     icon: "/favicon.ico",
-    apple: { url: "/icons/apple-touch-icon.png", sizes: "180x180" },
-    other: [{ rel: "mask-icon", url: "/next.svg" }],
+    apple: { url: "/logo.png", sizes: "180x180" },
+    other: [{ rel: "mask-icon", url: "/logo.png" }],
   },
   openGraph: {
     type: "website",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
       "Unique digital photos and professional Lightroom presets for photographers and creators. Enhance your projects with stunning visuals.",
 
     url: "https://berlin-gallery.vercel.app",
-    images: ["/next.svg"],
+    images: ["/logo.png"],
     // images: ["/icons/maskable-512x512.png"],
   },
   twitter: {
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     description:
       "Unique digital photos and professional Lightroom presets for photographers and creators. Enhance your projects with stunning visuals.",
 
-    images: ["/next.svg"],
+    images: ["/logo.png"],
   },
   other: {
     "msapplication-navbutton-color": "#00113a",
