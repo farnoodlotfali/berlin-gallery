@@ -23,7 +23,7 @@ export default function PhotoPage({ params }: { params: Promise<{ id: string }> 
   const stopContext = useCallback((e: React.MouseEvent) => e.preventDefault(), []);
   const stopDrag = useCallback((e: React.DragEvent) => e.preventDefault(), []);
 
-  const photo = IMAGES.find((img) => img.id == id);
+  const photo = IMAGES.find((img) => String(img.id) === id);
   if (!photo) return notFound();
 
   const recommended = IMAGES.filter(
