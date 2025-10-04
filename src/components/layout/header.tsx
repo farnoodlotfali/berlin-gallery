@@ -19,10 +19,10 @@ const Header = () => {
               alt="logo"
               sizes="100vw"
               style={{
-                width: "auto",
+                width: 100,
                 height: 20,
               }}
-              width={580}
+              width={100}
               height={250}
               loading="eager"
               priority

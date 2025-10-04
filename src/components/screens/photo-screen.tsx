@@ -17,7 +17,11 @@ import { Container } from "@/components/ui/container";
 import { IMAGES } from "@/lib/images";
 import { IPhoto } from "@/types/photo";
 
-const PhotoScreen = ({ photo }: { photo: IPhoto }) => {
+const PhotoScreen = ({
+  photo,
+}: {
+  photo: IPhoto ;
+}) => {
   const router = useRouter();
 
   const stopContext = useCallback((e: React.MouseEvent) => e.preventDefault(), []);
@@ -28,6 +32,7 @@ const PhotoScreen = ({ photo }: { photo: IPhoto }) => {
   const recommended = IMAGES.filter(
     (img) => img.id !== photo.id && img.category === photo.category && img.project === photo.project
   );
+
   return (
     <Container className="pt-10 pb-16">
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
@@ -38,9 +43,12 @@ const PhotoScreen = ({ photo }: { photo: IPhoto }) => {
               onDragStart={stopDrag}
               alt={photo.name}
               src={photo.src}
-              quality={100}
-              sizes="100vw"
+              width={photo.src.width}
+              height={photo.src.height}
+              sizes="(min-width:1024px) 50vw, 100vw"
               className="h-auto max-h-[80vh] w-full object-contain"
+              placeholder={photo.src.blurDataURL ? "blur" : undefined}
+              blurDataURL={photo.src.blurDataURL}
               priority
             />
           </Zoom>
@@ -101,6 +109,7 @@ const PhotoScreen = ({ photo }: { photo: IPhoto }) => {
                         quality={90}
                         draggable={false}
                         onDragStart={stopDrag}
+                        placeholder={"blur"}
                       />
                     </div>
                   </button>
