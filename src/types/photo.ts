@@ -1,4 +1,5 @@
 import { StaticImageData } from "next/image";
+
 import { Category } from "./category";
 import { Dimension } from "./dimension";
 import { ProjectName } from "./project-name";

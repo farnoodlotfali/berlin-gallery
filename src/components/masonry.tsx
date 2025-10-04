@@ -9,7 +9,7 @@ const Masonry = ({ items, className }: { items: IPhoto[]; className?: string }) 
   return (
     <div
       className={cn(
-        "xs:columns-2 gap-6 sm:columns-2 md:columns-3 lg:columns-4",
+        "xs:columns-2 columns-2 gap-6 sm:columns-2 md:columns-3 lg:columns-4",
         "[column-fill:balance]",
         className
       )}
