@@ -2,7 +2,9 @@ import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 
 import "./globals.css";
+import "react-medium-image-zoom/dist/styles.css";
 
+import Footer from "@/components/layout/footer";
 import Header from "@/components/layout/header";
 
 const geistSans = Geist({
@@ -70,6 +72,7 @@ export default function RootLayout({
         <Header />
 
         {children}
+        <Footer />
       </body>
     </html>
   );

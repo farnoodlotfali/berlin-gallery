@@ -1,41 +1,33 @@
-import { MenuIcon } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
+import { SideBar } from "./sidebar";
 import NavLink from "@/components/nav-link";
 import { Container } from "@/components/ui/container";
-
-const LINKS = [
-  {
-    title: "Home",
-    link: "/",
-  },
-  {
-    title: "About",
-    link: "/about",
-  },
-  {
-    title: "Contact",
-    link: "/contact",
-  },
-];
+import { LINKS } from "@/consts/nav-links";
+import { SOCIALS } from "@/consts/social-links";
 
 const Header = () => {
   return (
-    <header className="">
+    <header>
       <Container className="flex h-[80px] items-center">
-        <MenuIcon className="mr-auto cursor-pointer md:hidden" />
+        <SideBar />
         <div className="logo">
-          <Image
-            src="/next.svg"
-            alt="logo"
-            sizes="100vw"
-            style={{
-              width: "auto",
-              height: 20,
-            }}
-            width={580}
-            height={250}
-          />
+          <Link href="/">
+            <Image
+              src="/next.svg"
+              alt="logo"
+              sizes="100vw"
+              style={{
+                width: "auto",
+                height: 20,
+              }}
+              width={580}
+              height={250}
+              loading="eager"
+              priority
+            />
+          </Link>
         </div>
         <div className="ml-10 hidden grow items-center gap-8 md:flex">
           {LINKS.map((li) => {
@@ -43,6 +35,15 @@ const Header = () => {
               <NavLink href={li.link} key={li.link}>
                 {li.title}
               </NavLink>
+            );
+          })}
+        </div>
+        <div className="hidden items-center gap-8 md:flex">
+          {SOCIALS.map((soc) => {
+            return (
+              <a target="_blank" key={soc.link} href={soc.link}>
+                <soc.icon width={soc.size} height={soc.size} />
+              </a>
             );
           })}
         </div>
