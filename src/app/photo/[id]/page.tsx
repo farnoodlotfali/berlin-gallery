@@ -2,7 +2,7 @@
 
 import { use, useCallback } from "react";
 import Image from "next/image";
-import { notFound, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import Zoom from "react-medium-image-zoom";
 
 import { Button } from "@/components/ui/button";
