@@ -7,6 +7,10 @@ const nextConfig: NextConfig = {
         pathname: "/cars/**",
         search: "",
       },
+      {
+        pathname: "/**",
+        search: "",
+      },
     ],
   },
 };
