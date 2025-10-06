@@ -36,15 +36,18 @@ const Masonry = ({ items, className }: { items: IPhoto[]; className?: string }) 
             aria-hidden="true"
           />
 
-          <div className="absolute inset-x-0 top-0 flex gap-2 p-3 text-white opacity-0 transition-opacity duration-200 group-focus-within:opacity-100 group-hover:opacity-100 sm:p-4">
-            <div className="inline-block rounded bg-black px-2 py-1 text-xs leading-tight font-medium shadow-2xl shadow-white">
+          <div className="absolute inset-x-0 top-0 flex gap-2 p-3 text-white opacity-0 transition-opacity duration-200 group-hover:opacity-100 sm:p-4">
+            <div className="inline-block rounded px-2 py-1 leading-tight font-medium shadow-2xl shadow-white">
               {item.name}
             </div>
-            <div className="inline-block rounded bg-black px-2 py-1 text-xs leading-tight font-medium shadow-2xl shadow-white">
-              {item.dimension}
-            </div>
-            <div className="inline-block rounded bg-black px-2 py-1 text-xs leading-tight font-medium shadow-2xl shadow-white">
+
+            <div className="inline-block rounded px-2 py-1 leading-tight font-medium shadow-2xl shadow-white">
               {item.project}
+            </div>
+          </div>
+          <div className="absolute inset-x-0 bottom-0 flex gap-2 p-3 text-white opacity-0 transition-opacity duration-200 group-hover:opacity-100 sm:p-4">
+            <div className="inline-block rounded px-2 py-1 leading-tight font-medium shadow-2xl shadow-white">
+              {item.dimension}
             </div>
           </div>
         </div>

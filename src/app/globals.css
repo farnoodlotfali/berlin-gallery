@@ -115,7 +115,7 @@
 
 :root {
   --radius: 0.65rem;
-  --background: #e8e5c3;
+  --background: aliceblue;
   --foreground: oklch(0.141 0.005 285.823);
   --card: #e8e5c3;
   --card-foreground: oklch(0.141 0.005 285.823);
