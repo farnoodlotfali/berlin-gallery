@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 
-import PhotoScreen from "@/components/screens/photo-screen";
+import PhotoScreen from "@/components/screens/photo-detail";
 import { IMAGES } from "@/lib/images";
 
 export async function generateStaticParams() {

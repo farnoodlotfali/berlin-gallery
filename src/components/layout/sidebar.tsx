@@ -20,8 +20,8 @@ export function SideBar() {
         <SheetHeader>
           <DialogTitle>
             <Image
-              src="/next.svg"
-              alt="see-all img"
+              src="/logo2.png"
+              alt="logo img"
               sizes="100vw"
               style={{
                 width: 250,
@@ -48,9 +48,7 @@ export function SideBar() {
             {SOCIALS.map((soc) => {
               return (
                 <a target="_blank" key={soc.link} href={soc.link}>
-                  <a target="_blank" key={soc.link} href={soc.link}>
-                    <soc.icon fill="black" width={soc.size} height={soc.size} />
-                  </a>
+                  <soc.icon fill="black" width={soc.size} height={soc.size} />
                 </a>
               );
             })}

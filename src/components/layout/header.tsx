@@ -15,12 +15,12 @@ const Header = () => {
         <div className="logo">
           <Link href="/">
             <Image
-              src="/next.svg"
+              src="/logo2.png"
               alt="logo"
               sizes="100vw"
               style={{
-                width: 100,
-                height: 20,
+                width: 150,
+                height: "auto",
               }}
               width={100}
               height={250}

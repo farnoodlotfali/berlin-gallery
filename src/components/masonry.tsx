@@ -37,18 +37,23 @@ const Masonry = ({ items, className }: { items: IPhoto[]; className?: string }) 
           />
 
           <div className="absolute inset-x-0 top-0 flex gap-2 p-3 text-white opacity-0 transition-opacity duration-200 group-hover:opacity-100 sm:p-4">
-            <div className="inline-block rounded px-2 py-1 leading-tight font-medium shadow-2xl shadow-white">
+            <div className="inline-block h-fit rounded px-2 py-1 leading-tight font-medium shadow-2xl shadow-white">
               {item.name}
             </div>
 
-            <div className="inline-block rounded px-2 py-1 leading-tight font-medium shadow-2xl shadow-white">
+            <div className="inline-block h-fit rounded px-2 py-1 leading-tight font-medium shadow-2xl shadow-white">
               {item.project}
             </div>
           </div>
           <div className="absolute inset-x-0 bottom-0 flex gap-2 p-3 text-white opacity-0 transition-opacity duration-200 group-hover:opacity-100 sm:p-4">
-            <div className="inline-block rounded px-2 py-1 leading-tight font-medium shadow-2xl shadow-white">
-              {item.dimension}
-            </div>
+            {item.dimension.map((dimension) => (
+              <div
+                key={dimension}
+                className="inline-block rounded px-2 py-1 leading-tight font-medium shadow-2xl shadow-white"
+              >
+                {dimension}
+              </div>
+            ))}
           </div>
         </div>
       ))}

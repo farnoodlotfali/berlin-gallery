@@ -8,10 +8,12 @@ export interface IPhoto {
   id: string | number;
   src: StaticImageData;
   // src: string;
+  description: string;
   name: string;
-  dimension: Dimension;
+  dimension: Dimension[];
   category: Category;
   project: ProjectName;
   price: number;
   disabled?: boolean;
+  purchaseLink: string;
 }

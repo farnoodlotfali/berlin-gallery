@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 
 import "./globals.css";
 import "react-medium-image-zoom/dist/styles.css";
+import "swiper/css";
 
 import Footer from "@/components/layout/footer";
 import Header from "@/components/layout/header";
