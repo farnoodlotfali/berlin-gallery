@@ -42,8 +42,10 @@ const HomeScreen = () => {
           style={{
             width: "33%",
             height: "auto",
+            maxHeight: 60,
+            objectFit: "contain",
           }}
-          className="absolute top-1/2 left-1/2 z-20 h-auto min-w-[150px] -translate-x-1/2 -translate-y-1/2 object-contain"
+          className="absolute top-1/2 left-1/2 z-20 h-auto min-w-[150px] -translate-x-1/2 -translate-y-1/2"
           width={100}
           height={250}
           loading="eager"
