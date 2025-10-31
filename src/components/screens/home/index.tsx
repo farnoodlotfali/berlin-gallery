@@ -25,32 +25,34 @@ const HomeScreen = () => {
 
   return (
     <Container className="pb-10">
-      <div className="relative select-none">
+      <div className="xs:h-[300px] relative h-[200px] w-full select-none md:h-[650px]">
         <Image
           src="/banner.jpg"
           alt="banner"
           fill
           priority
           sizes="100vw"
-          className="xs:h-[300px] h-[200px] w-full object-cover md:h-[600px]"
+          className="object-cover"
         />
         <div className="absolute inset-0 bg-black/40" />
-        <div className="absolute top-1/2 left-1/2 z-20 h-auto w-1/3 min-w-[150px] -translate-x-1/2 -translate-y-1/2 object-cover">
-          <div className="relative h-full w-full">
-            <Image
-              src="/logo3.png"
-              alt="logo"
-              fill
-              sizes="33vw"
-              className="object-contain"
-              priority
-            />
-          </div>
-        </div>
+        <Image
+          src="/logo3.png"
+          alt="logo"
+          sizes="100vw"
+          style={{
+            width: "33%",
+            height: "auto",
+          }}
+          className="absolute top-1/2 left-1/2 z-20 h-auto min-w-[150px] -translate-x-1/2 -translate-y-1/2 object-contain"
+          width={100}
+          height={250}
+          loading="eager"
+          priority
+        />
       </div>
 
       {/* presets */}
-      <div className="mt-8">
+      <div className="mt-28">
         <h2 className="mb-10 text-center text-2xl font-bold sm:text-4xl">Presets</h2>
         <div className="grid grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-3">
           {PRESETS.map((preset) => (
