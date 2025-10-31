@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="logo">
           <Link href="/">
             <Image
-              src="/logo2.png"
+              src="/logo3.png"
               alt="logo"
               sizes="100vw"
               style={{

@@ -16,6 +16,7 @@ import { Navigation } from "swiper/modules";
 
 import NextPrevEl from "@/components/next-prev-el";
 
+
 const PhotoScreen = ({ photo }: { photo: IPhoto }) => {
   const router = useRouter();
 
@@ -57,9 +58,9 @@ const PhotoScreen = ({ photo }: { photo: IPhoto }) => {
                   alt={photo.name}
                   src={photo.src.src}
                   className="h-full w-full"
-                  style={{
-                    aspectRatio: dimension.replaceAll("*", "/"),
-                  }}
+                  // style={{
+                  //   aspectRatio: dimension.replaceAll("*", "/"),
+                  // }}
                 />
 
                 <div className="absolute inset-x-0 top-0 flex gap-2 p-3 text-white sm:p-4">
