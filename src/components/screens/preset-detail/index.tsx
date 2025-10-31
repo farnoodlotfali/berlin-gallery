@@ -1,15 +1,13 @@
 "use client";
 
 import { useCallback } from "react";
-import { notFound, useRouter } from "next/navigation";
+import { notFound } from "next/navigation";
 
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { IPreset } from "@/types/preset";
 
 const PresetScreen = ({ preset }: { preset: IPreset }) => {
-  const router = useRouter();
-
   const stopContext = useCallback((e: React.MouseEvent) => e.preventDefault(), []);
   const stopDrag = useCallback((e: React.DragEvent) => e.preventDefault(), []);
 
@@ -24,7 +22,7 @@ const PresetScreen = ({ preset }: { preset: IPreset }) => {
             onDragStart={stopDrag}
             alt={preset.name}
             src={preset.src.src}
-            className="h-auto w-[350px] mx-auto"
+            className="mx-auto h-auto w-[350px]"
           />
         </div>
 

@@ -1,6 +1,8 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 import Masonry from "@/components/masonry";
 import { SelectBox } from "@/components/select-box";
@@ -9,7 +11,6 @@ import { CATEGORY_TYPE } from "@/consts/category-type";
 import { PROJECT_NAME } from "@/consts/project-name";
 import { IMAGES } from "@/lib/images";
 import { PRESETS } from "@/lib/presets";
-import Link from "next/link";
 
 const HomeScreen = () => {
   const [project, setProject] = useState("");
@@ -25,17 +26,27 @@ const HomeScreen = () => {
   return (
     <Container className="pb-10">
       <div className="relative select-none">
-        <img
+        <Image
           src="/banner.jpg"
           alt="banner"
+          fill
+          priority
+          sizes="100vw"
           className="xs:h-[300px] h-[200px] w-full object-cover md:h-[600px]"
         />
         <div className="absolute inset-0 bg-black/40" />
-        <img
-          src="/logo3.png"
-          alt="logo "
-          className="absolute top-1/2 left-1/2 z-20 h-auto w-1/3 min-w-[150px] -translate-x-1/2 -translate-y-1/2 object-cover"
-        />
+        <div className="absolute top-1/2 left-1/2 z-20 h-auto w-1/3 min-w-[150px] -translate-x-1/2 -translate-y-1/2 object-cover">
+          <div className="relative h-full w-full">
+            <Image
+              src="/logo3.png"
+              alt="logo"
+              fill
+              sizes="33vw"
+              className="object-contain"
+              priority
+            />
+          </div>
+        </div>
       </div>
 
       {/* presets */}
@@ -43,15 +54,23 @@ const HomeScreen = () => {
         <h2 className="mb-10 text-center text-2xl font-bold sm:text-4xl">Presets</h2>
         <div className="grid grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-3">
           {PRESETS.map((preset) => (
-            <Link key={preset.id} href={`/preset/${preset.id}`} className="transition-all duration-300 hover:scale-105">
-              <img
-                src={preset.src.src}
+            <Link
+              key={preset.id}
+              href={`/preset/${preset.id}`}
+              className="transition-all duration-300 hover:scale-105"
+            >
+              <Image
+                src={preset.src}
                 alt="preset1"
+                width={preset.src.width}
+                height={preset.src.height}
                 className="h-full max-h-[350px] w-full object-contain"
+                placeholder="blur"
+                quality={90}
               />
 
               <div className="mt-2 flex flex-col items-center justify-center gap-1">
-                <h3 className="text-lg font-bold max-w-56 text-center">{preset.name}</h3>
+                <h3 className="max-w-56 text-center text-lg font-bold">{preset.name}</h3>
               </div>
             </Link>
           ))}

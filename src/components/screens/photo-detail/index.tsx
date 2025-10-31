@@ -16,7 +16,6 @@ import { Navigation } from "swiper/modules";
 
 import NextPrevEl from "@/components/next-prev-el";
 
-
 const PhotoScreen = ({ photo }: { photo: IPhoto }) => {
   const router = useRouter();
 
