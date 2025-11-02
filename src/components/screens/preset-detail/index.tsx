@@ -15,32 +15,35 @@ const PresetScreen = ({ preset }: { preset: IPreset }) => {
 
   return (
     <Container className="pt-10 pb-16">
-      <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-        <div className="relative">
-          <img
-            onContextMenu={stopContext}
-            onDragStart={stopDrag}
-            alt={preset.name}
-            src={preset.src.src}
-            className="mx-auto h-auto w-[350px]"
-          />
-        </div>
+      <div className="grid grid-cols-1 sm:gap-6 gap-10 lg:grid-cols-2">
+        <div>
+          <div className="relative">
+            <img
+              onContextMenu={stopContext}
+              onDragStart={stopDrag}
+              alt={preset.name}
+              src={preset.src.src}
+              className="mx-auto h-auto w-[350px]"
+            />
+          </div>
 
-        <div className="flex h-full flex-col">
-          <div className="mb-10 grid gap-8">
-            <div dangerouslySetInnerHTML={{ __html: preset.html }} />
-
+          <div className="mx-auto mt-16 grid max-w-xl gap-8">
             <div className="flex flex-col gap-1">
               <span className="font-bold">Total Price</span>
               <span>CA$ {preset.price}</span>
             </div>
+
+            <Button
+              className="h-[48px] w-full text-base"
+              onClick={() => window.open(preset.purchaseLink, "_blank")}
+            >
+              BUY NOW
+            </Button>
           </div>
-          <Button
-            className="mt-10 h-[48px] w-full text-base md:mt-28"
-            onClick={() => window.open(preset.purchaseLink, "_blank")}
-          >
-            BUY NOW
-          </Button>
+        </div>
+
+        <div>
+          <div dangerouslySetInnerHTML={{ __html: preset.html }} />
         </div>
       </div>
     </Container>
