@@ -25,9 +25,10 @@ const HomeScreen = () => {
 
   return (
     <>
-      <div className="xs:h-[300px] relative h-[200px] w-full select-none md:h-[650px]">
+      <div className="xs:h-[300px] relative h-[200px] w-full select-none md:h-[550px]">
         <Image
-          src="/banner.jpg"
+          // src="/banner.jpg"
+          src="/banners/banner3.jpg"
           alt="banner"
           fill
           priority
@@ -57,15 +58,15 @@ const HomeScreen = () => {
         {/* presets */}
         <div className="mt-10 md:mt-20">
           <h2 className="mb-10 ml-5 text-2xl font-bold sm:text-5xl">Presets</h2>
-          <div className="grid grid-cols-2 gap-8 md:gap-16 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-2 gap-8 md:grid-cols-2 md:gap-16 lg:grid-cols-4">
             {PRESETS.map((preset) => (
               <Link
                 key={preset.id}
                 href={`/preset/${preset.id}`}
-                className="transition-all duration-300 hover:scale-105 grid"
+                className="grid transition-all duration-300 hover:scale-105"
               >
                 <Image
-                  src={preset.src}
+                  src={preset.srcHover}
                   alt="preset1"
                   width={preset.src.width}
                   height={preset.src.height}

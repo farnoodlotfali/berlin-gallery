@@ -15,7 +15,7 @@ const PresetScreen = ({ preset }: { preset: IPreset }) => {
 
   return (
     <Container className="pt-10 pb-16">
-      <div className="grid grid-cols-1 sm:gap-6 gap-10 lg:grid-cols-2">
+      <div className="grid grid-cols-1 gap-10 sm:gap-6 lg:grid-cols-2">
         <div>
           <div className="relative">
             <img

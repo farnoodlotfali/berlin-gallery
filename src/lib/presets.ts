@@ -1,13 +1,18 @@
 import { IPreset } from "@/types/preset";
-import img from "../../public/preset/MC-Box3.png";
-import img1 from "../../public/preset/MC-Box3.png";
-import img2 from "../../public/preset/FV-box.png";
-import img3 from "../../public/preset/NU-box.png";
+import presetBox from "../../public/preset-box/MC-Box3.png";
+import presetBox1 from "../../public/preset-box/MC-Box3.png";
+import presetBox2 from "../../public/preset-box/FV-box.png";
+import presetBox3 from "../../public/preset-box/NU-box.png";
+import presetLogo from "../../public/preset-cover/MC.png";
+import presetLogo1 from "../../public/preset-cover/MC.png";
+import presetLogo2 from "../../public/preset-cover/FV.png";
+import presetLogo3 from "../../public/preset-cover/UN.png";
 
 export const PRESETS: IPreset[] = [
   {
     id: 2,
-    src: img1,
+    src: presetBox1,
+    srcHover: presetLogo1,
     name: "Cinematic & Moods Pack",
     html: `<section class="space-y-3">
         <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-gray-900 ">
@@ -65,7 +70,8 @@ export const PRESETS: IPreset[] = [
   },
   {
     id: 1,
-    src: img2,
+    src: presetBox2,
+    srcHover: presetLogo2,
     name: "Film & Vintage Pack",
     html: `<section class="space-y-3">
   <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-gray-900 ">
@@ -146,7 +152,8 @@ export const PRESETS: IPreset[] = [
 
   {
     id: 3,
-    src: img3,
+    src: presetBox3,
+    srcHover: presetLogo3,
     name: "Urban & Night Pack",
     html: `<section class="space-y-3">
   <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-gray-900 ">
@@ -210,7 +217,8 @@ export const PRESETS: IPreset[] = [
   },
   {
     id: 4,
-    src: img,
+    src: presetBox,
+    srcHover: presetLogo,
     name: "The Complete HV Preset Bundle Pack",
     html: `<section class="space-y-3">
   <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-gray-900 ">
