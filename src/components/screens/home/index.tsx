@@ -24,7 +24,7 @@ const HomeScreen = () => {
   }, [project, category]);
 
   return (
-    <Container className="pb-10">
+    <>
       <div className="xs:h-[300px] relative h-[200px] w-full select-none md:h-[650px]">
         <Image
           src="/banner.jpg"
@@ -53,57 +53,59 @@ const HomeScreen = () => {
         />
       </div>
 
-      {/* presets */}
-      <div className="mt-28">
-        <h2 className="mb-10 text-center text-2xl font-bold sm:text-4xl">Presets</h2>
-        <div className="grid grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-3">
-          {PRESETS.map((preset) => (
-            <Link
-              key={preset.id}
-              href={`/preset/${preset.id}`}
-              className="transition-all duration-300 hover:scale-105"
-            >
-              <Image
-                src={preset.src}
-                alt="preset1"
-                width={preset.src.width}
-                height={preset.src.height}
-                className="h-full max-h-[350px] w-full object-contain"
-                placeholder="blur"
-                quality={90}
-              />
+      <Container className="pb-10">
+        {/* presets */}
+        <div className="mt-10 md:mt-20">
+          <h2 className="mb-10 ml-5 text-2xl font-bold sm:text-5xl">Presets</h2>
+          <div className="grid grid-cols-2 gap-8 md:gap-16 md:grid-cols-2 lg:grid-cols-4">
+            {PRESETS.map((preset) => (
+              <Link
+                key={preset.id}
+                href={`/preset/${preset.id}`}
+                className="transition-all duration-300 hover:scale-105 grid"
+              >
+                <Image
+                  src={preset.src}
+                  alt="preset1"
+                  width={preset.src.width}
+                  height={preset.src.height}
+                  className="h-full max-h-[360px] w-full object-contain"
+                  placeholder="blur"
+                  quality={90}
+                />
 
-              <div className="mt-2 flex flex-col items-center justify-center gap-1">
-                <h3 className="max-w-56 text-center text-lg font-bold">{preset.name}</h3>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </div>
-
-      {/* digital photos */}
-      <div className="mt-28">
-        <h2 className="mb-10 text-center text-2xl font-bold sm:text-4xl">Digital Photos</h2>
-        <div className="flex gap-5">
-          <SelectBox
-            value={project || undefined}
-            setValue={setProject}
-            data={PROJECT_NAME}
-            placeholder="Project"
-          />
-          <SelectBox
-            value={category || undefined}
-            setValue={setCategory}
-            data={CATEGORY_TYPE}
-            placeholder="Category"
-          />
+                <div className="mt-2 flex flex-col items-center justify-center gap-1">
+                  <h3 className="max-w-56 text-center text-lg font-bold">{preset.name}</h3>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
 
-        <div className="mt-8">
-          <Masonry items={images} />
+        {/* digital photos */}
+        <div className="mt-10 md:mt-20">
+          <h2 className="mb-10 ml-5 text-2xl font-bold sm:text-5xl">Digital Photos</h2>
+          <div className="flex gap-5">
+            <SelectBox
+              value={project || undefined}
+              setValue={setProject}
+              data={PROJECT_NAME}
+              placeholder="Project"
+            />
+            <SelectBox
+              value={category || undefined}
+              setValue={setCategory}
+              data={CATEGORY_TYPE}
+              placeholder="Category"
+            />
+          </div>
+
+          <div className="mt-8">
+            <Masonry items={images} />
+          </div>
         </div>
-      </div>
-    </Container>
+      </Container>
+    </>
   );
 };
 

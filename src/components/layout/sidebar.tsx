@@ -3,7 +3,14 @@ import { MenuIcon } from "lucide-react";
 import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetFooter, SheetHeader, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetFooter,
+  SheetHeader,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 import { LINKS } from "@/consts/nav-links";
 import { SOCIALS } from "@/consts/social-links";
 import NavLink from "../nav-link";
@@ -36,9 +43,11 @@ export function SideBar() {
         <div className="mt-5 flex flex-col items-center gap-8 px-8">
           {LINKS.map((li) => {
             return (
-              <NavLink className="w-fit text-lg" href={li.link} key={li.link}>
-                {li.title}
-              </NavLink>
+              <SheetClose asChild key={li.link}>
+                <NavLink className="w-fit text-lg" href={li.link}>
+                  {li.title}
+                </NavLink>
+              </SheetClose>
             );
           })}
         </div>

@@ -1,14 +1,17 @@
 import { IPreset } from "@/types/preset";
-import img from "../../public/preset/preset.png";
+import img from "../../public/preset/MC-Box3.png";
+import img1 from "../../public/preset/MC-Box3.png";
+import img2 from "../../public/preset/FV-box.png";
+import img3 from "../../public/preset/NU-box.png";
 
 export const PRESETS: IPreset[] = [
   {
     id: 2,
-    src: img,
-    name: "Package 1: Cinematic & Moods",
+    src: img1,
+    name: "Cinematic & Moods Pack",
     html: `<section class="space-y-3">
         <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-gray-900 ">
-          Package 1: Cinematic &amp; Moods
+          Cinematic &amp; Moods Pack
         </h2>
       
         <h3 class="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-gray-900/90 ">
@@ -62,11 +65,11 @@ export const PRESETS: IPreset[] = [
   },
   {
     id: 1,
-    src: img,
-    name: "Package 2: Film & Vintage",
+    src: img2,
+    name: "Film & Vintage Pack",
     html: `<section class="space-y-3">
   <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-gray-900 ">
-    Package 2: Film & Vintage
+   Film & Vintage Pack
   </h2>
 
   <h3 class="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-gray-900/90 ">
@@ -143,11 +146,11 @@ export const PRESETS: IPreset[] = [
 
   {
     id: 3,
-    src: img,
-    name: "Package 3: Urban & Night",
+    src: img3,
+    name: "Urban & Night Pack",
     html: `<section class="space-y-3">
   <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-gray-900 ">
-    Package 3: Urban &amp; Night
+    Urban &amp; Night Pack
   </h2>
 
   <h3 class="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-gray-900/90 ">
@@ -208,10 +211,10 @@ export const PRESETS: IPreset[] = [
   {
     id: 4,
     src: img,
-    name: "The Complete HV Preset Bundle: The Ultimate Color Grading Vault",
+    name: "The Complete HV Preset Bundle Pack",
     html: `<section class="space-y-3">
   <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-gray-900 ">
-    The Complete HV Preset Bundle: The Ultimate Color Grading Vault
+    The Complete HV Preset Bundle Pack
   </h2>
 
   <h3 class="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-gray-900/90 ">
