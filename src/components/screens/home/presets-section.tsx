@@ -16,12 +16,24 @@ const PresetsSection = () => {
             className="group block transition-transform duration-200 hover:scale-105 focus-visible:scale-105 focus-visible:outline-none active:scale-95"
           >
             <div className="relative aspect-[3/4] w-full overflow-hidden rounded-xl bg-zinc-900/5">
+              {/* Default image */}
+              <Image
+                src={preset.src}
+                alt={preset.name}
+                fill
+                sizes="(min-width: 1024px) 25vw, (min-width: 768px) 40vw, 50vw"
+                className="object-contain transition-opacity duration-300 group-hover:opacity-0 group-active:opacity-0"
+                placeholder="blur"
+                quality={90}
+              />
+
+              {/* Hover image */}
               <Image
                 src={preset.srcHover}
                 alt={preset.name}
                 fill
                 sizes="(min-width: 1024px) 25vw, (min-width: 768px) 40vw, 50vw"
-                className="object-contain"
+                className="object-contain opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-active:opacity-100"
                 placeholder="blur"
                 quality={90}
               />
