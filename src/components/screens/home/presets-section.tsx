@@ -1,0 +1,40 @@
+import Image from "next/image";
+import Link from "next/link";
+
+import { PRESETS } from "@/lib/presets";
+
+const PresetsSection = () => {
+  return (
+    <div className="mt-10 md:mt-20">
+      <h2 className="mb-10 ml-5 text-2xl font-bold sm:text-5xl">Presets</h2>
+
+      <div className="grid grid-cols-2 gap-8 md:grid-cols-2 md:gap-16 lg:grid-cols-4">
+        {PRESETS.map((preset) => (
+          <Link
+            key={preset.id}
+            href={`/preset/${preset.id}`}
+            className="group block transition-transform duration-200 hover:scale-105 focus-visible:scale-105 focus-visible:outline-none active:scale-95"
+          >
+            <div className="relative aspect-[3/4] w-full overflow-hidden rounded-xl bg-zinc-900/5">
+              <Image
+                src={preset.srcHover}
+                alt={preset.name}
+                fill
+                sizes="(min-width: 1024px) 25vw, (min-width: 768px) 40vw, 50vw"
+                className="object-contain"
+                placeholder="blur"
+                quality={90}
+              />
+            </div>
+
+            <div className="mt-2 flex flex-col items-center justify-center gap-1">
+              <h3 className="max-w-56 text-center text-lg font-bold">{preset.name}</h3>
+            </div>
+          </Link>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default PresetsSection;
